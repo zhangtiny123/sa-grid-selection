@@ -4,6 +4,7 @@ import { create, Flex } from 'smbls'
 
 import designSystem from './designSystem'
 import * as components from './components'
+import { GridSelection } from './components/GridSelection'
 import pages from './pages'
 
 create({
@@ -18,11 +19,14 @@ create({
 
   Header: {},
 
-  content: {},
+  GridSelection: {},
 
   Footer: { text: 'Footer' }
 }, {
   designSystem,
-  components,
+  components: {
+    ...components,
+    GridSelection
+  },
   pages
 })

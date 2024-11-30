@@ -75,7 +75,6 @@ export const GridSelectionTable = {
   $propsCollection: ({ props, state }) => new Array(props.cls * props.rs).fill({}),
   on: {
     stateCreated: (element, state, context, updateOptions) => {
-      console.log(element);
       state.root.update({
         gsSelectedX: -1,
         gsSelectedY: -1,
